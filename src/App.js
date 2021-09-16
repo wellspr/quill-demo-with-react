@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import React from "react";
+import Editor from "./Editor";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const date = new Date();
+    const year = date.getFullYear();
+
+    return (
+        <div className="homepage">
+        
+            <div className="header">
+                <h1>Quill Editor</h1>
+            </div>
+            
+            <Editor />
+
+            <div className="footer">
+                <p>&copy; { year } paulowells</p>
+            </div>
+        </div>
+    );
 }
 
 export default App;
