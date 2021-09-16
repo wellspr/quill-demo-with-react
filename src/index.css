@@ -24,10 +24,15 @@
 
 .footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: var(--footer-height);
     font-size: x-small;
+}
+
+.github-icon {
+    font-size: medium;
+    color: black;
 }
 
 .ql-syntax {
